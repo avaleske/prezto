@@ -11,3 +11,28 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+
+source "${ZDOTDIR:-$HOME}/.zenv"
+
+# weatherme keys in .env
+alias wm="weatherme -d |  column -s '|' -t"
+alias wmnow="weatherme"
+
+
+# virtualenv wrapper
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/Devel
+source /usr/local/bin/virtualenvwrapper.sh
+
+alias sleep="pmset sleepnow"
+alias fucking="sudo"
+
+# for git
+eval "$(hub alias -s)"
+
+
+alias tailf="tailf -f"
+
+
+export PATH="/Applications/Sublime Text.app/Contents/SharedSupport/bin:/usr/local/heroku/bin:/Users/avaleske/Library/Haskell/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin:/usr/texbin"
+
